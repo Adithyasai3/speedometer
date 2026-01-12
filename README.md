@@ -1,118 +1,62 @@
-In this project, let's build a **Speedometer** by applying the concepts we have learned till now.
+# Open README and overwrite content
+cat > README.md << 'EOF'
+# Speedometer App 🚗💨
 
-### Refer to the image below:
+A simple React application that simulates a speedometer.
+Users can accelerate and apply brakes while respecting minimum and maximum limits.
 
-<br/>
-<div style="text-align: center;">
-    <img src="https://assets.ccbp.in/frontend/content/react-js/speedometer-ouput.gif" alt="speedometer output" style="max-width:70%;box-shadow:0 2.8px 2.2px rgba(0, 0, 0, 0.12)">
-</div>
-<br/>
+## 🚀 Features
+- Increase speed by 10 kmph
+- Decrease speed by 10 kmph
+- Minimum speed limit: 0 kmph
+- Maximum speed limit: 200 kmph
+- Built using React functional components and hooks
 
-### Design Files
+## 🛠️ Tech Stack
+- React
+- JavaScript (ES6)
+- CSS
 
-<details>
-<summary>Click to view</summary>
+## ▶️ How to Run Locally
 
-- [Extra Small (Size < 576px) and Small (Size >= 576px)](https://assets.ccbp.in/frontend/content/react-js/speedometer-sm-output.png)
-- [Medium (Size >= 768px), Large (Size >= 992px) and Extra Large (Size >= 1200px)](https://assets.ccbp.in/frontend/content/react-js/speedometer-lg-output.png)
+1. Install dependencies
+npm install
 
-</details>
+2. Start the development server
+npm start
+or
+npm run dev
 
-### Set Up Instructions
+3. Open browser and visit
+http://localhost:3000
 
-<details>
-<summary>Click to view</summary>
+## 📁 Project Structure
 
-- Download dependencies by running `npm install`
-- Start up the app using `npm start`
-</details>
+src/
+ ├── App.js
+ ├── index.js
+ └── components/
+      └── SpeedCounter/
+           └── index.js
 
-### Completion Instructions
+## 🎯 What I Learned
+- React state management using useState
+- Arrow functions and component structure
+- Handling UI limits using Math.min and Math.max
+- Git workflow: commit, branch, push, remote setup
 
-<details>
-<summary>Functionality to be added</summary>
-<br/>
+Built by Adiii 🚀
+EOF
 
-The app must have the following functionalities
+# Stage changes
+git add .
 
-- The speed should initially be 0mph
+# Commit changes
+git commit -m "Update README and speedometer project"
 
-  > Here mph means Miles per hour
+# Make sure remote is correct
+git remote remove origin || true
+git remote add origin https://github.com/Adithyasai3/speedometer.git
 
-- When Accelerate button is clicked,
-  - If the speed is less than 200mph, the speed should be increased by 10mph
-  - If the speed is equal to 200mph, the speed should not be increased
-- When Apply Brake button is clicked
-  - If the speed is greater than 0mph, then the speed should be decreased by 10mph
-  - If the speed is equal to 0mph, the speed should not be decreased
-
-</details>
-
-<details>
-<summary>Implementation Files</summary>
-<br/>
-
-Use these files to complete the implementation:
-
-- `src/components/Speedometer/index.js`
-- `src/components/Speedometer/index.css`
-</details>
-
-### Quick Tips
-
-<details>
-<summary>Click to view</summary>
-<br>
-
-- You can use the below cursor CSS property for buttons to set the type of mouse cursor, to show when the mouse pointer is over an element,
-
-  ```
-    cursor: pointer;
-  ```
-
-  <br/>
-   <img src="https://assets.ccbp.in/frontend/content/react-js/cursor-pointer-img.png" alt="cursor pointer" style="width:100px" />
-
-- You can use the below outline CSS property for buttons and input elements to remove the highlighting when the elements are clicked,
-
-  ```
-    outline: none;
-  ```
-
-</details>
-
-### Resources
-
-<details>
-<summary>Image URLs</summary>
-
-- [https://assets.ccbp.in/frontend/react-js/speedometer-img.png](https://assets.ccbp.in/frontend/react-js/speedometer-img.png) alt should be **speedometer**
-
-</details>
-
-<details>
-<summary>Colors</summary>
-
-<br/>
-
-<div style="background-color: #07080c ; width: 150px; padding: 10px; color: white">Hex: #07080c</div>
-<div style="background-color: #ffffff ; width: 150px; padding: 10px; color: black">Hex: #ffffff</div>
-<div style="background-color: #cbd5e1 ; width: 150px; padding: 10px; color: black">Hex: #cbd5e1</div>
-<div style="background-color: #0b69ff ; width: 150px; padding: 10px; color: white">Hex: #0b69ff</div>
-<div style="background-color: #94a3b8 ; width: 150px; padding: 10px; color: white">Hex: #94a3b8</div>
-
-</details>
-
-<details>
-<summary>Font-families</summary>
-
-- Roboto
-
-</details>
-
-> ### _Things to Keep in Mind_
->
-> - All components you implement should go in the `src/components` directory.
-> - Don't change the component folder names as those are the files being imported into the tests.
-> - **Do not remove the pre-filled code**
-> - Want to quickly review some of the concepts you’ve been learning? Take a look at the Cheat Sheets.
+# Push (tries master first, then main)
+git push -u origin master || git push -u origin main
